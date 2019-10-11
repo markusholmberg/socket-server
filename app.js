@@ -4,7 +4,8 @@ const port = 8300;
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
-io.origins(['https://socket-client.mahm.me:443']);
+io.origins(['https://mahm.me:443']);
+io.set('origins', '*:*');
 
 let users = [];
 let userId = 0;
